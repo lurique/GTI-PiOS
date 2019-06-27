@@ -13,7 +13,7 @@ static inline uint32_t mmio_read(uint32_t reg)
 
 static inline void delay(int32_t count)
 {
-  asm volatile("__delay_%=: subs %[count], %[count], %[count], #1; bne __delay_%=\n": "=r"(count): [count]"0"(count) : "cc");
+  asm volatile("__delay_%=: subs %[count], %[count], #1; bne __delay_%=\n": "=r"(count): [count]"0"(count) : "cc");
 }
 
 enum
@@ -43,7 +43,7 @@ enum
   UART0_ITIP   = (UART0_BASE + 0x84),
   UART0_ITOP   = (UART0_BASE + 0x88),
   UART0_TDR    = (UART0_BASE + 0x8C),
-}
+};
 
 void uart_init()
 {
@@ -83,7 +83,7 @@ unsigned char uart_getc()
 
 void uart_puts(const char* str)
 {
-  for (size_t i = 0; str[i] != '\0'; i++)
+  for (size_t i = 0; str[i] != '\0'; i ++)
     uart_putc((unsigned char)str[i]);
 }
 
@@ -94,7 +94,7 @@ void kernel_main(uint32_t r0, uint32_t r1, uint32_t atags)
   (void) atags;
 
   uart_init();
-  uart_puts("Kernel has been loaded :)");
+  uart_puts("Hello, kernel World!\r\n");
 
   while (1) {
     uart_putc(uart_getc());
