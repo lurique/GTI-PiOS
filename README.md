@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/hojWghs.png" alt="Giphy.com - Author: Dots" width="250"/>
 </p>
 
-A handmade Raspberry Pi OS for a custom dashboard to insert into a Golf GTI '95 dashboard.
+<p align="center">A handmade Raspberry Pi OS for a custom dashboard to insert into a Golf GTI '95 dashboard.</p>
 
 ## Running the OS
 1. Download the ARM Embedded Toolchain (Rasbperry Pi uses ARM architecture) here https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads;
